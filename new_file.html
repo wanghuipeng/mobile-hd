@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>企业相册 - 手机优蓝网</title>
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<meta charset="utf-8"/>
+<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+<meta content="telephone=no" name="format-detection"/>
+<link rel="stylesheet" type="text/css" href="css/main.css"/>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" href="css/swiper.min.css" />
+<style>
+html,body{background-color:#fff;}
+body{-webkit-overflow-scrolling: touch;}
+/*album-list*/
+.album-list{max-width:640px;margin:0 auto;padding-bottom:20px;}
+.album-list .album-content li{position:relative;width:50%;height:21.5rem;float:left;}
+.album-list .album-content li img{width:7.15rem;height:24.5rem !important;box-sizing:border-box;border:1px solid #e3e3e3;}
+.album-list .opacity-text{text-align: left;font-size:0.6rem;}
+.mask-layer-2 img{position: absolute;top: 50%;left: 50%;margin-left: -24rem;margin-top: -19rem;width: 48rem;height: 38rem;box-sizing: border-box;}
+.image-box{display: none;}
+.image-box .bottom {bottom: 0px !important;}
+.image-box .content {padding-bottom: 0px !important;}
+.image-box {top: 0 !important;}
+.album-content .content-item>ul{padding:0.5rem;}
+.album-list .album-content li:nth-child(even){text-align: right;}
+.album-list .album-content li:nth-child(even) .opacity-text{left: 0.6rem;bottom: 0.2rem;}
+.album-list .album-content li:nth-child(odd){text-align: left;}
+.album-list .album-content li:nth-child(odd) .opacity-text{left: 0.1rem;bottom: 0.2rem;}
+.album-list .album-content li, .album-list .album-content li img{height:5.45rem !important;}
+.album-list .album-content li{margin-bottom: 0.5rem;position:relative;}
+</style>
+<script>
+//高清缩放解决方案（单位rem）
+!function(x) {  
+function w() {  
+    var a = r.getBoundingClientRect().width;  
+    a / v > 640 && (a = 640 * v), x.rem = a / 16, r.style.fontSize = x.rem + "px"  
+}  
+var v, u, t, s = x.document, r = s.documentElement, q = s.querySelector('meta[name="viewport"]');  
+if (q) {  
+    var o = q.getAttribute("content").match(/initial\-scale=(["‘]?)([\d\.]+)\1?/);  
+    o && (u = parseFloat(o[2]), v = parseInt(1 / u))  
+}  
+if (!v && !u) {  
+    var n = (x.navigator.appVersion.match(/android/gi), x.navigator.appVersion.match(/iphone/gi)), v = x.devicePixelRatio;  
+    v = n ? v >= 3 ? 3 : v >= 2 ? 2 : 1 : 1, u = 1 / v  
+}  
+if (r.setAttribute("data-dpr", v), !q) {  
+    if (q = s.createElement("meta"), q.setAttribute("name", "viewport"), q.setAttribute("content", "initial-scale=" + u + ", maximum-scale=" + u + ", minimum-scale=" + u + ", user-scalable=no"), r.firstElementChild) {  
+        r.firstElementChild.appendChild(q)  
+    } else {  
+        var m = s.createElement("div");  
+        m.appendChild(q), s.write(m.innerHTML)  
+    }  
+}  
+x.dpr = v, x.addEventListener("resize", function() {  
+    clearTimeout(t), t = setTimeout(w, 300)  
+}, !1), x.addEventListener("pageshow", function(b) {  
+    b.persisted && (clearTimeout(t), t = setTimeout(w, 300))  
+}, !1), "complete" === s.readyState ? s.body.style.fontSize = 12 * v + "px" : s.addEventListener("DOMContentLoaded", function() {  
+    s.body.style.fontSize = 12 * v + "px"  
+    }, !1), w()  
+}(window);  
+</script>
+</head>
+<body>
+<!--page-wrapper-->
+<div class="page-wrapper bg-gray">
+	
+    <!--album-list-->
+    <div class="album-list m-class">
+		<div class="album-tabs lst swiper-container swiper-container-horizontal" id="cover-wrapper">
+			
+			<ul class="outerScroll swiper-wrapper">
+				<li class="swiper-slide active">
+					<p>全部</p><p>234</p>
+				</li>
+				<li class="swiper-slide">
+					<p>官方相册</p><p>123</p>
+				</li>
+				<li class="swiper-slide">
+					<p>企业实景</p><p>123</p>
+				</li>
+				<li class="swiper-slide">
+					<p>工作环境</p><p>123</p>
+				</li>
+				<li class="swiper-slide">
+					<p>食堂住宿</p><p>123</p>
+				</li>
+				<li class="swiper-slide">
+					<p>企业周边</p><p>123</p>
+				</li>
+			</ul>
+							
+			<!--<ul class="outerScroll swiper-wrapper">
+            	<li class="swiper-slide active">
+            		<p>全部</p><p>234</p>
+            	</li>
+            	<li class="swiper-slide">
+            		<p>官方相册</p><p>123</p>
+            	</li>
+            	<li class="swiper-slide">
+            		<p>企业实景</p><p>34</p>
+            	</li>
+            	<li class="swiper-slide">
+            		<p>工作环境</p><p>54</p>
+            	</li>
+            	<li class="swiper-slide">
+            		<p>食堂住宿</p><p>24</p>
+            	</li>
+            	<li class="swiper-slide">
+            		<p>企业周边</p><p>23</p>
+            	</li>
+	        </ul>-->
+    	</div>
+    	
+        <div class="album-content">
+        	<div class="content-item active">
+		        <ul class="clearfix">
+		        	<li>
+		                <img src="http://img.youlanw.com/1080/enterprise/album/201705261528376529ZX.jpg" alt=""/>
+		                <span class="opacity-text">企业大门</span>
+		            </li>
+		            <li>
+		                <img src="http://img.youlanw.com/1080/enterprise/album/201705261528376529ZX.jpg" alt=""/>
+		                <span class="opacity-text">工作实景</span>
+		            </li>
+		            
+		            <li>
+		                <img src="http://img.youlanw.com/1080/enterprise/album/201705261528376529ZX.jpg" alt=""/>
+		                <span class="opacity-text">周边环境</span>
+		            </li>
+		        </ul>
+		    </div>
+		   
+            
+        </div>
+    	
+	    
+    </div>
+    <!--/album-list-->
+
+</div>
+<!--查看大图模式-->
+<div class="image-box">
+	<div class="image-des"></div>
+    <table class="content"><tr><td><img src=""/></td></tr></table>
+    <div class="bottom">
+    	<span class="close">返回</span>
+        <span class="page-info">加载中...</span>
+        <span class="prev"></span>
+        <span class="next"></span>
+    </div>
+</div>
+
+</body>
+</html>
